@@ -8,7 +8,7 @@ const standardResponse = (_data = {}, res, _status) => {
   if (status < 300) {
     data.success = true
   }
-  res.status(_status).send(data)
+  res.status(status).send(data)
 }
 
 module.exports = {
