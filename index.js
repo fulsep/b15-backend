@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors('*'))
 app.use(morgan('dev'))
 
+// import routes
+const userRoutes = require('./src/routes/users')
+app.use('/users', userRoutes)
+
 app.get('/', (req, res) => {
   const data = {
     success: true,
